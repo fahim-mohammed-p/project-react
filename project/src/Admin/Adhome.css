@@ -1,0 +1,112 @@
+/* Admin Layout */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+  color: #f2f4f6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(
+    180deg,
+    rgba(15,17,19,0.96),
+    rgba(20,22,23,0.98)
+  );
+  padding: 20px;
+  box-shadow: 6px 0 20px rgba(0,0,0,0.6);
+}
+
+/* Admin title */
+.sidebar h3 {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-shadow: 0 6px 18px rgba(255,204,51,0.25);
+}
+
+/* Sidebar menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .nav-item {
+  margin-bottom: 12px;
+}
+
+/* Sidebar links */
+.sidebar .nav-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #cfcfcf;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Hover animation */
+.sidebar .nav-link:hover {
+  background: rgba(255,204,51,0.08);
+  color: var(--primary);
+  transform: translateX(6px);
+  box-shadow: 0 6px 18px rgba(255,204,51,0.12);
+}
+
+/* Logout button */
+.sidebar button {
+  margin-top: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #111;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 6px 18px rgba(255,204,51,0.12);
+}
+
+.sidebar button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(255,204,51,0.22);
+}
+
+/* Main admin content area */
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  background: radial-gradient(
+    circle at top,
+    rgba(255,204,51,0.04),
+    transparent 40%
+  );
+}
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #111;
+  color: white;
+  padding: 20px;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 20px;
+  background: #0f1113;
+}
+

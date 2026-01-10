@@ -1,0 +1,94 @@
+/* Orders container */
+.order-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 15px;
+  color: #f2f4f6;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Heading */
+.order-heading {
+  color: #ffd400;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Order card */
+.order-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 26px;
+  padding: 22px 26px;
+  margin-bottom: 22px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.75),
+              0 8px 20px rgba(255, 204, 51, 0.08);
+}
+
+/* Order info text */
+.order-card p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+.order-card p b {
+  color: #ffd400;
+  font-weight: 700;
+}
+
+/* Divider */
+.order-card hr {
+  margin: 14px 0;
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 212, 0, 0.6),
+    transparent
+  );
+}
+
+/* Items list */
+.order-card > div {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  color: #e6e6e6;
+}
+
+/* Empty state */
+.order-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #bdbdbd;
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+  .order-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .order-card p {
+    font-size: 0.88rem;
+  }
+
+  .order-card > div {
+    font-size: 0.85rem;
+  }
+}

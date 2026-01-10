@@ -1,0 +1,244 @@
+{
+  "users": [
+    {
+      "id": "b5e4",
+      "name": "fahim",
+      "email": "fahim@gmail.com",
+      "password": "12345678",
+      "banned": false,
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "2856",
+      "name": "abhinav",
+      "email": "abhinav@gmail.com",
+      "password": "99999999",
+      "banned": false,
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "4d08",
+      "name": "ramees",
+      "email": "ramees@gmail.com",
+      "password": "123123",
+      "banned": false,
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "c261",
+      "name": "shanu",
+      "email": "shanu@gmail.com",
+      "password": "11111111",
+      "banned": false,
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "6793",
+      "name": "john",
+      "email": "john@gmail.com",
+      "password": "john12345",
+      "banned": true,
+      "cart": [],
+      "orders": []
+    },
+    {
+      "id": "bbc6",
+      "name": "rashida",
+      "email": "rashida@gmail.com",
+      "password": "11111111",
+      "banned": false,
+      "cart": [],
+      "orders": []
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "email": "fahim@gmail.com",
+      "password": "12345678",
+      "role": "admin"
+    }
+  ],
+  "products": [
+    {
+      "name": "ADVAN Racing GT",
+      "category": "Advan",
+      "price": 249,
+      "inch": "17, 18, 19",
+      "image": "https://i.postimg.cc/VsTwzgRB/alloy1.jpg",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Advan RZ-F2",
+      "category": "Advan",
+      "price": 199,
+      "inch": "19",
+      "image": "https://i.postimg.cc/g0bDPxrq/alloy4.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Advan GT Flow-Forming",
+      "category": "Advan",
+      "price": 149,
+      "inch": "16, 17",
+      "image": "https://i.postimg.cc/Bvx5nmHK/alloy3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "BBS LM",
+      "category": "BBS",
+      "price": 159,
+      "inch": "19",
+      "image": "https://i.postimg.cc/8P1YQ68B/alloy2.jpg"
+    },
+    {
+      "id": "5",
+      "name": "BBS RS-GT",
+      "category": "BBS",
+      "price": 200,
+      "inch": "17, 18, 19, 20",
+      "image": "https://i.postimg.cc/ZYFYZ2RG/bbs3.jpg"
+    },
+    {
+      "id": "6",
+      "name": "BBS CH",
+      "category": "BBS",
+      "price": 249,
+      "inch": "19, 20, 21",
+      "image": "https://i.postimg.cc/Y0jdXTyw/bbs3.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Volk Racing CE28N",
+      "category": "Volk",
+      "price": 200,
+      "inch": "18, 19",
+      "image": "https://i.postimg.cc/BZYF4jX4/volk1.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Volk Racing ZE40",
+      "category": "Volk",
+      "price": 199,
+      "inch": "19",
+      "image": "https://i.postimg.cc/BnWXnH32/volk2.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Volk Racing TE37",
+      "category": "Volk",
+      "price": 239,
+      "inch": "19, 20",
+      "image": "https://i.postimg.cc/wvBBGk5y/volk3.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "id": "0b77",
+      "userEmail": "ramees@gmail.com",
+      "items": [
+        {
+          "id": "1673",
+          "userEmail": "ramees@gmail.com",
+          "productId": "1",
+          "name": "ADVAN Racing GT",
+          "price": 300,
+          "qty": 1,
+          "inch": "17, 18, 19",
+          "image": "https://i.postimg.cc/VsTwzgRB/alloy1.jpg"
+        }
+      ],
+      "totalPrice": 300,
+      "paymentStatus": "paid",
+      "paymentMethod": "cod",
+      "orderDate": "2026-01-01T10:53:30.849Z"
+    },
+    {
+      "id": "992f",
+      "userEmail": "ramees@gmail.com",
+      "items": [
+        {
+          "id": "2d7e",
+          "userEmail": "ramees@gmail.com",
+          "productId": "1",
+          "name": "ADVAN Racing GT",
+          "price": 300,
+          "qty": 1,
+          "inch": "17, 18, 19",
+          "image": "https://i.postimg.cc/VsTwzgRB/alloy1.jpg"
+        },
+        {
+          "id": "b447",
+          "userEmail": "ramees@gmail.com",
+          "productId": "2",
+          "name": "Advan RZ-F2",
+          "price": 199,
+          "qty": 1,
+          "inch": "19",
+          "image": "https://i.postimg.cc/g0bDPxrq/alloy4.jpg"
+        }
+      ],
+      "totalPrice": 499,
+      "paymentStatus": "paid",
+      "paymentMethod": "cod",
+      "orderDate": "2026-01-01T11:06:34.469Z"
+    },
+    {
+      "id": "db26",
+      "userEmail": "shanu@gmail.com",
+      "items": [
+        {
+          "id": "525d",
+          "userEmail": "shanu@gmail.com",
+          "productId": "6",
+          "name": "BBS CH",
+          "price": 249,
+          "qty": 1,
+          "inch": "19, 20, 21",
+          "image": "https://i.postimg.cc/Y0jdXTyw/bbs3.jpg"
+        },
+        {
+          "id": "0f60",
+          "userEmail": "shanu@gmail.com",
+          "productId": "8",
+          "name": "Volk Racing ZE40",
+          "price": 199,
+          "qty": 1,
+          "inch": "19",
+          "image": "https://i.postimg.cc/BnWXnH32/volk2.jpg"
+        }
+      ],
+      "totalPrice": 448,
+      "paymentStatus": "paid",
+      "paymentMethod": "cod",
+      "orderDate": "2026-01-01T11:08:40.385Z"
+    }
+  ],
+  "cart": [
+    {
+      "id": "f39c",
+      "userEmail": "fahim@gmail.com",
+      "productId": "2",
+      "name": "Advan RZ-F2",
+      "price": 199,
+      "qty": 1,
+      "inch": "19",
+      "image": "https://i.postimg.cc/g0bDPxrq/alloy4.jpg"
+    },
+    {
+      "id": "7ec1",
+      "userEmail": "fahim@gmail.com",
+      "productId": "1",
+      "name": "ADVAN Racing GT",
+      "price": 300,
+      "qty": 1,
+      "inch": "17, 18, 19",
+      "image": "https://i.postimg.cc/VsTwzgRB/alloy1.jpg"
+    }
+  ]
+}
