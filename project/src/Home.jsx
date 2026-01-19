@@ -179,13 +179,6 @@ function Home() {
         </div>
       </div>
 
-      <div className="mt-5">
-      <img 
-      src="https://postimg.cc/tZfJBNm1"
-      alt="Alloy craft wheels"
-      className="img-fluid rounded"/>
-      </div>
-
       <footer className="footer">
         <div className="footer-content">
           <h3 className="footer-logo">Alloy Craft</h3>
