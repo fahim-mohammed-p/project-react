@@ -8,7 +8,15 @@ function Cart() {
   const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem("user"))
-  if(!user) return null;
+  useEffect(()=>{
+    if(!user){
+    alert("Please login first")
+    navigate("/login")
+   }else{
+    fetchCart()
+   }
+  },[])
+   
 
   const fetchCart= async ()=>{
 
@@ -60,61 +68,6 @@ function Cart() {
     const handleCheckout=()=>{
       navigate("/Pay")
     }
-
-  //   const storedCart=JSON.parse(localStorage.getItem(cartKey)) || [];
-
-  //   const updated = storedCart.map((item )=> ({
-  //     ...item,
-  //     qty: item.qty || 1,
-  //   }));
-
-  //   setCartItems(updated);
-  //   localStorage.setItem(cartKey, JSON.stringify(updated));
-  // }, [cartKey]);
-
-  // const HandleremoveItem = (index) => {
-  //   const updated = cartItems.filter((_, i) => i !== index);
-  //   setCartItems(updated);
-  //   localStorage.setItem(cartKey, JSON.stringify(updated));
-  // };
-  // const HandlebuyItem=(index)=>{
-  //   const item=cartItems[index];
-  //   navigate("/pay")
-
-  //   const updatedCart= cartItems.filter((_,i)=> i !== index)
-  //   setCartItems(updatedCart)
-  //   localStorage.setItem(cartKey,JSON.stringify(updatedCart))
-  // }
-
-  // const increaseQty = (index) => {
-  //   const updated = [...cartItems];
-  //   updated[index].qty += 1;
-  //   setCartItems(updated);
-  //   localStorage.setItem(cartKey, JSON.stringify(updated));
-  // };
-
-  // const decreaseQty = (index) => {
-  //   const updated = [...cartItems];
-  //   if (updated[index].qty > 1) {
-  //     updated[index].qty -= 1;
-  //     setCartItems(updated);
-  //     localStorage.setItem(cartKey, JSON.stringify(updated));
-  //   }
-  // };
-
-  // const getNumberPrice = (price) =>
-  //   Number(String(price).replace("$", ""));
-
-  // const totalPrice = cartItems.reduce(
-  //   (sum, item) => sum + getNumberPrice(item.price) * item.qty,
-  //   0
-  // );
-
-  // const handleCheckout = () => {
-  //   localStorage.removeItem(cartKey);
-  //   setCartItems([]);
-  //    navigate("/Pay");
-  // };
 
   return (
     <div className="cart-container mt-5">

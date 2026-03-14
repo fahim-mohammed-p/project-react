@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Product.css";
 
+import { BiSolidEdit } from "react-icons/bi";
+import { MdDelete } from "react-icons/md";
+import { IoMdAddCircle } from "react-icons/io";
+
 function Product() {
   const navigate = useNavigate();
 
@@ -39,34 +43,6 @@ function Product() {
       alert("Please fill all fields");
       return;
     }
-
-//     const newProduct = {
-//       name,
-//       category,
-//       price: Number(price),
-//       image,
-//       inch,
-//     };
-
-//     try{
-//       const res=await fetch("http://localhost:5000/products",{
-//         method:"POST",
-//         headers:{"Content-Type" : "application/json"},
-//         body: JSON.stringify(newProduct)
-//       });
-//       const savedProduct= await res.json()
-    
-
-//     setProducts([...products,savedProduct]);
-//     setName("");
-//     setCategory("");
-//     setPrice("");
-//     setImage("");
-//     setInch("");
-//   }catch(err){
-//       console.log("Failed", err)
-//   }
-
 
     if(editId){
       try{
@@ -167,7 +143,7 @@ function Product() {
         />
 
         <button className="dash-btn" onClick={addProduct}>
-          Add Product
+          <IoMdAddCircle />Add Product
         </button>
       </div>
 
@@ -189,6 +165,7 @@ function Product() {
               <p>Inch: {p.inch}</p>
             </div>
             <button className="edit-btn" onClick={()=> editProduct(p)}>
+              <BiSolidEdit />
               Edit
             </button>
 
@@ -196,6 +173,7 @@ function Product() {
               className="delete-btn"
               onClick={() => deleteProduct(p.id)}
             >
+              <MdDelete />
               Delete
             </button>
           </div>

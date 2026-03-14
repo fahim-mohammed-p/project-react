@@ -4,14 +4,13 @@ import Cart from "./Cart";
 import Login from "./Login";
 import Sign from "./Sign";
 import Pay from "./Pay";
+
 import Adlogin from "./Admin/Adlogin";
 import Adhome from "./Admin/AdHome";
 import Product from "./Admin/Product";
-import Users from "./Admin/Users"
-import Orders from "./Admin/Orders"
+import Users from "./Admin/Users";
+import Orders from "./Admin/Orders";
 import Dash from "./Admin/Dash";
-import AdminprotectedRout from "./Admin/AdminprotectedRout";
-
 
 function App() {
   return (
@@ -23,26 +22,22 @@ function App() {
         <Route path="/sign" element={<Sign />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/pay" element={<Pay />} />
-        <Route path="/Adlogin" element={<Adlogin />}/>
+
+        <Route path="/Adlogin" element={<Adlogin />} />
+
         <Route path="/Adhome" element={<Adhome />}>
-        <Route path="product" element={<Product />}/>
-        <Route path="Users" element={<Users />}/>
-        <Route path="Orders" element={<Orders />}/>
-        <Route path="Dash" element={<Dash />}/>
-        <Route path="Admin/products" element={
-          <AdminprotectedRout>
-            <Product/>
-          </AdminprotectedRout>
-        }/>
-
-
-
+          <Route index element={<Dash />} />
+          <Route path="product" element={<Product />} />
+          <Route path="users" element={<Users />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="dash" element={<Dash />} />
         </Route>
+
+        <Route path="*" element={<Home />} />
+
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-

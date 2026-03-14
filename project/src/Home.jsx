@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { CiSearch } from "react-icons/ci";
 import "./Home.css";
+
+import { AiFillExclamationCircle } from "react-icons/ai";
+import { GoHomeFill } from "react-icons/go";
+import { BsCart3 } from "react-icons/bs";
+import { CiSearch } from "react-icons/ci";
+import { MdOutlineLogout } from "react-icons/md";
+import { MdOutlineLogin } from "react-icons/md";
+import { FaCartArrowDown } from "react-icons/fa6";
+
 
 function Home() {
   const navigate = useNavigate();
@@ -47,7 +55,7 @@ function Home() {
   const addToCart = async (product) => {
     if (!isLoggedIn) {
       alert("Please login first");
-      navigate("/Login");
+      navigate("/login");
       return;
     }
 
@@ -115,22 +123,25 @@ function Home() {
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <span className="nav-link" onClick={() => navigate("/")}>
-                Home
+                <GoHomeFill /> Home
               </span>
             </li>
             <li className="nav-item">
               <span className="nav-link" onClick={() => navigate("/Cart")}>
-                Cart
+                <BsCart3 /> Cart
               </span>
             </li>
             <li className="nav-item">
-              <span className="nav-link">About</span>
+              <span className="nav-link">
+                <AiFillExclamationCircle /> About
+                </span>
             </li>
           </ul>
 
-          <div className="search-container me-3">
-            {/* <CiSearch /> */}
+          <div className="search-container mx-auto">
+            <CiSearch className="search-icon" />
             <input
+              type="text"
               className="search"
               placeholder="Search products..."
               value={searchTerm}
@@ -139,7 +150,7 @@ function Home() {
           </div>
 
           <button className="logout-btn" onClick={handleLogin}>
-            {isLoggedIn ? "Logout" : "Login"}
+            {isLoggedIn ? (<> <MdOutlineLogout />Logout</> ): (<><MdOutlineLogin />Login</>)}
           </button>
         </div>
       </nav>
@@ -159,6 +170,7 @@ function Home() {
       <div className="container mt-4">
         <h2 className="product-head">Advan Wheels</h2>
         <div className="row g-3">
+          
           {filter("Advan").map((p) => (
             <ProductCard key={p.id} p={p} addToCart={addToCart} />
           ))}
@@ -211,6 +223,8 @@ function ProductCard({ p, addToCart }) {
           <p>Inch: {p.inch}</p>
           <h6>Price: ${p.price}</h6>
           <button className="button-card" onClick={() => addToCart(p)}>
+            <FaCartArrowDown />
+
             Add
           </button>
         </div>

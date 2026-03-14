@@ -41,7 +41,7 @@
       "name": "john",
       "email": "john@gmail.com",
       "password": "john12345",
-      "banned": true,
+      "banned": false,
       "cart": [],
       "orders": []
     },
@@ -50,7 +50,7 @@
       "name": "rashida",
       "email": "rashida@gmail.com",
       "password": "11111111",
-      "banned": false,
+      "banned": true,
       "cart": [],
       "orders": []
     }
@@ -217,28 +217,57 @@
       "paymentStatus": "paid",
       "paymentMethod": "cod",
       "orderDate": "2026-01-01T11:08:40.385Z"
-    }
-  ],
-  "cart": [
-    {
-      "id": "f39c",
-      "userEmail": "fahim@gmail.com",
-      "productId": "2",
-      "name": "Advan RZ-F2",
-      "price": 199,
-      "qty": 1,
-      "inch": "19",
-      "image": "https://i.postimg.cc/g0bDPxrq/alloy4.jpg"
     },
     {
-      "id": "7ec1",
+      "id": "c5a5",
       "userEmail": "fahim@gmail.com",
-      "productId": "1",
-      "name": "ADVAN Racing GT",
-      "price": 300,
-      "qty": 1,
-      "inch": "17, 18, 19",
-      "image": "https://i.postimg.cc/VsTwzgRB/alloy1.jpg"
+      "items": [
+        {
+          "id": "19b3",
+          "userEmail": "fahim@gmail.com",
+          "productId": "2",
+          "name": "Advan RZ-F2",
+          "price": 199,
+          "qty": 2,
+          "inch": "19",
+          "image": "https://i.postimg.cc/g0bDPxrq/alloy4.jpg"
+        }
+      ],
+      "totalPrice": 398,
+      "paymentStatus": "paid",
+      "paymentMethod": "cod",
+      "orderDate": "2026-03-12T17:48:56.090Z"
+    },
+    {
+      "id": "c945",
+      "userEmail": "fahim@gmail.com",
+      "items": [
+        {
+          "id": "7d86",
+          "userEmail": "fahim@gmail.com",
+          "productId": "1",
+          "name": "ADVAN Racing GT",
+          "price": 249,
+          "qty": 7,
+          "inch": "17, 18, 19",
+          "image": "https://i.postimg.cc/VsTwzgRB/alloy1.jpg"
+        },
+        {
+          "id": "0fb2",
+          "userEmail": "fahim@gmail.com",
+          "productId": "2",
+          "name": "Advan RZ-F2",
+          "price": 199,
+          "qty": 7,
+          "inch": "19",
+          "image": "https://i.postimg.cc/g0bDPxrq/alloy4.jpg"
+        }
+      ],
+      "totalPrice": 3136,
+      "paymentStatus": "paid",
+      "paymentMethod": "cod",
+      "orderDate": "2026-03-14T18:44:56.174Z"
     }
-  ]
+  ],
+  "cart": []
 }

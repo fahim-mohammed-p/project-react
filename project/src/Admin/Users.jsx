@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Users.css"
 
+import { FaBan } from "react-icons/fa";
+import { CiBookmarkCheck } from "react-icons/ci";
+
 function Users() {
   const [users, setUsers] = useState([]);
 
@@ -42,7 +45,7 @@ return (
           className={`user-btn ${user.banned ? "unban-btn" : "ban-btn"}`}
           onClick={() => changeStatus(user)}
         >
-          {user.banned ? "Unban" : "Ban"}
+          {user.banned ? (<><CiBookmarkCheck />Unban</>) : (<><FaBan />Ban</>)}
         </button>
       </div>
     ))}
