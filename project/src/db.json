@@ -269,5 +269,16 @@
       "orderDate": "2026-03-14T18:44:56.174Z"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "9bca",
+      "userEmail": "fahim@gmail.com",
+      "productId": "5",
+      "name": "BBS RS-GT",
+      "price": 200,
+      "qty": 1,
+      "inch": "17, 18, 19, 20",
+      "image": "https://i.postimg.cc/ZYFYZ2RG/bbs3.jpg"
+    }
+  ]
 }

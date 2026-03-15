@@ -45,7 +45,7 @@ function Home() {
 
   
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
@@ -62,18 +62,18 @@ function Home() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     const res = await fetch(
-      `http://localhost:5000/cart?userEmail=${user.email}&productId=${product.id}`
+      `/api/cart?userEmail=${user.email}&productId=${product.id}`
     );
     const existing = await res.json();
 
     if (existing.length > 0) {
-      await fetch(`http://localhost:5000/cart/${existing[0].id}`, {
+      await fetch(`/api/cart/${existing[0].id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ qty: existing[0].qty + 1 }),
       });
     } else {
-      await fetch("http://localhost:5000/cart", {
+      await fetch("/api/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

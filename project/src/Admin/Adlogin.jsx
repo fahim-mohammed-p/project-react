@@ -8,7 +8,7 @@ function Adlogin() {
   const navigate = useNavigate();
 
   const login = () => {
-    fetch("http://localhost:5000/admin")
+    fetch("/api/admin")
       .then((res) => res.json())
       .then((admins) => {
         const matchedAdmin = admins.find(

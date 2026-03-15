@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Sign.css";
 
-const API = "http://localhost:5000";
+const API = "/api";
 
 function Sign() {
   const [name, setName] = useState("");
