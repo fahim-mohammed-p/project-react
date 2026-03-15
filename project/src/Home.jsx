@@ -123,7 +123,7 @@ function Home() {
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <span className="nav-link" onClick={() => navigate("/")}>
-                <GoHomeFill /> Homeeei
+                <GoHomeFill /> Home
               </span>
             </li>
             <li className="nav-item">
