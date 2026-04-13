@@ -16,7 +16,7 @@ const orderPay = async () => {
   try {
    
     const cartRes = await fetch(
-      `/api/cart?userEmail=${user.email}`
+      `http://localhost:5000/cart?userEmail=${user.email}`
     );
     const cartItems = await cartRes.json();
 
@@ -40,7 +40,7 @@ const orderPay = async () => {
     };
 
    
-    const orderRes = await fetch("/api/orders", {
+    const orderRes = await fetch("http://localhost:5000/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(order),
@@ -52,7 +52,7 @@ const orderPay = async () => {
 
 
     for (let item of cartItems) {
-      await fetch(`/api/cart/${item.id}`, {
+      await fetch(`http://localhost:5000/cart/${item.id}`, {
         method: "DELETE",
       });
     }

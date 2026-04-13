@@ -8,7 +8,7 @@ function Orders() {
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) return;
 
-    fetch("/api/orders")
+    fetch("http://localhost:5000/orders")
       .then(res => res.json())
       .then(data => setOrders(data));
   }, []);

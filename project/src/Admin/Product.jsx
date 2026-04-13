@@ -30,7 +30,7 @@ function Product() {
 
     const fetchProduct= async ()=>{
         try{
-          const res= await fetch("/api/products")
+          const res= await fetch("http://localhost:5000/products")
           const data= await res.json();
           setProducts(data);
         }catch(err){
@@ -46,7 +46,7 @@ function Product() {
 
     if(editId){
       try{
-      const res=await fetch(`/api/products/${editId}`,{
+      const res=await fetch(`http://localhost:5000/products/${editId}`,{
         method:"PUT",
         headers:{"Content-Type" : "application/json"},
         body:JSON.stringify({name,category,price:Number(price),inch,image}),
@@ -61,7 +61,7 @@ function Product() {
     }
     const newProduct={name,category,price:Number(price),inch,image};
     try{
-      const res=await fetch("/api/products",{
+      const res=await fetch("http://localhost:5000/products",{
         method:"POST",
         headers:{"Content-Type" : "application/json"},
         body:JSON.stringify(newProduct),
@@ -76,7 +76,7 @@ function Product() {
 
   const deleteProduct=async (id)=>{
       try{
-       await fetch(`/api/products/${id}`,{
+       await fetch(`http://localhost:5000/products/${id}`,{
         method:"DELETE",
        })
        setProducts(products.filter((p)=>p.id !==id));

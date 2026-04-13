@@ -8,7 +8,7 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   const loadUsers = () => {
-    fetch("/api/users")
+    fetch("http://localhost:5000/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err));
@@ -19,7 +19,7 @@ function Users() {
   }, []);
 
   const changeStatus = (user) => {
-    fetch(`/api/users/${user.id}`, {
+    fetch(`http://localhost:5000/users/${user.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

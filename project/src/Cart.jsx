@@ -20,7 +20,7 @@ function Cart() {
 
   const fetchCart= async ()=>{
 
-  const res= await  fetch(`/api/cart?userEmail=${user.email}`)
+  const res= await  fetch(`http://localhost:5000/cart?userEmail=${user.email}`)
   const data= await res.json();
 
   setCartItems(data);
@@ -31,7 +31,7 @@ function Cart() {
   },[])
 
   const handleIncrease= async (item) =>{
-        await fetch(`/api/cart/${item.id}`,{
+        await fetch(`http://localhost:5000/cart/${item.id}`,{
           method:"PATCH",
           headers: {"content-Type" : "application/json"},
           body :JSON.stringify({qty:item.qty+ 1}),
@@ -41,7 +41,7 @@ function Cart() {
 
   const handleDecrease= async (item) =>{
     if(item.qty>1){
-        await fetch(`/api/cart/${item.id}`,{
+        await fetch(`http://localhost:5000/cart/${item.id}`,{
           method:"PATCH",
           headers: {"content-Type" : "application/json"},
           body :JSON.stringify({qty:item.qty - 1}),
@@ -51,13 +51,13 @@ function Cart() {
 }
 
   const handleRemove= async(item)=>{
-          await fetch(`/api/cart/${item.id}`,{method:"delete"})
+          await fetch(`http://localhost:5000/cart/${item.id}`,{method:"delete"})
           fetchCart();
   }
 
   const handleBuy= async (item)=>{
     navigate("/Pay")
-    await fetch(`/api/cart/${item.id}`,{method:"delete"})
+    await fetch(`http://localhost:5000/cart/${item.id}`,{method:"delete"})
           fetchCart();
   }
 

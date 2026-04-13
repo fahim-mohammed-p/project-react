@@ -12,9 +12,9 @@ import "./Dash.css"
         const fetchDashboard= async()=>{
           try{
             const [usersRes, productsRes, ordersRes] = await Promise.all([
-              fetch("/api/users"),
-              fetch("/api/products"),
-              fetch("/api/orders"),
+              fetch("http://localhost:5000/users"),
+              fetch("http://localhost:5000/products"),
+              fetch("http://localhost:5000/orders"),
             ]);
             const users= await usersRes.json();
             const products= await productsRes.json();
